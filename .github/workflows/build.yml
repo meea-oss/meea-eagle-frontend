@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,5 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Deploy
-        run: npm run deploy
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # 这里是你构建后输出文件的目录，确保与你的项目一致
