@@ -7,6 +7,8 @@ import type { RunTimeLayoutConfig } from "@umijs/max";
 import { history, Link } from "@umijs/max";
 import defaultSettings from "../config/defaultSettings";
 import { errorConfig } from "./requestErrorConfig";
+import routes from "../config/routes";
+
 const isDev = process.env.NODE_ENV === "development";
 const loginPath = "/user/login";
 
@@ -32,6 +34,13 @@ export async function getInitialState(): Promise<{
   };
   // 如果不是登录页面，执行
   const { location } = history;
+
+  if (location.pathname === "/alliance/query") {
+    return {
+      fetchUserInfo,
+      settings: defaultSettings as Partial<LayoutSettings>,
+    };
+  }
   if (location.pathname !== loginPath) {
     const currentUser = await fetchUserInfo();
     return {
