@@ -1,0 +1,36 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # 选择适合的 Node.js 版本
+          cache: 'pnpm'      # 使用 pnpm 缓存
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Merge develop into main
+        run: |
+          git fetch origin develop
+          git checkout main
+          git merge origin/develop --no-ff -m "Merge develop into main"
+
+      - name: Push merged changes
+        run: |
+          git push origin main
+
+      - name: Deploy
+        run: pnpm run deploy
