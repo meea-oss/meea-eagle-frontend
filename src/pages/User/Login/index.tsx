@@ -39,8 +39,7 @@ const useStyles = createStyles(({ token }) => {
       flexDirection: "column",
       height: "100vh",
       overflow: "auto",
-      backgroundImage:
-        "url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')",
+      backgroundImage: "url(/img.png)",
       backgroundSize: "100% 100%",
     },
   };
@@ -132,7 +131,7 @@ const Login: React.FC = () => {
                 maxHeight: "90vh",
               }}
               title={
-                <div style={{ marginTop: "5rem"}}>
+                <div style={{ marginTop: "5rem" }}>
                   <Flex
                     justify={"center"}
                     align={"center"}
