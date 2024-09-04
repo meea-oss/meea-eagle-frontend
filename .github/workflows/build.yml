@@ -17,10 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22.2.0' # 使用适合的 Node.js 版本
-          cache: 'pnpm'      # 使用 pnpm 缓存
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Deploy
-        run: pnpm run deploy
+        run: npm run deploy
