@@ -1,3 +1,4 @@
+import Logo from "@/components/Logo";
 import { useSearchParams } from "@@/exports";
 import { Button, Flex, Input, Layout } from "antd";
 import { OTPProps } from "antd/es/input/OTP";
@@ -41,16 +42,7 @@ const QueryPage: React.FC = () => {
             backgroundPosition: "center center",
           }}
         >
-          <img
-            src={"/logo.svg"}
-            alt="logo"
-            style={{ height: "80%", textAlign: "center", margin: "5px" }}
-          />
-          <h1
-            style={{ fontFamily: "mbhh", height: "80%", alignItems: "center" }}
-          >
-            移动电子眼联盟
-          </h1>
+          <Logo />
         </Header>
         <div>
           {haveQueryCode ? (

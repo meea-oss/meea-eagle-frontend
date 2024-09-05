@@ -28,6 +28,11 @@ export default [
     component: "./QueryPage/QueryPage",
   },
   {
+    path: "/",
+    layout: false,
+    redirect: "/user/login",
+  },
+  {
     path: "*",
     layout: false,
     component: "./404",
