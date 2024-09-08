@@ -103,6 +103,9 @@ const Login: React.FC = () => {
   const { status, type: loginType } = userLoginState;
   return (
     <div className={styles.container}>
+      <meta name="author" content="John Smith"/>
+      <meta name="keywords" content="React, JavaScript, semantic markup, html"/>
+      <meta name="description" content="API reference for the <meta> component in React DOM"/>
       <Helmet>
         <title>
           {"登录"}- {Settings.title}
@@ -115,13 +118,13 @@ const Login: React.FC = () => {
           textAlign: "center",
         }}
       >
-        <Row style={{ height: "90vh", display: "flex", alignItems: "center" }}>
+        <Row style={{height: "90vh", display: "flex", alignItems: "center"}}>
           <Col
-            xs={{ flex: "100%" }}
-            sm={{ flex: "100%" }}
-            md={{ flex: "50%" }}
-            lg={{ flex: "50%" }}
-            xl={{ flex: "50%" }}
+            xs={{flex: "100%"}}
+            sm={{flex: "100%"}}
+            md={{flex: "50%"}}
+            lg={{flex: "50%"}}
+            xl={{flex: "50%"}}
           >
             <LoginForm
               contentStyle={{
@@ -131,7 +134,7 @@ const Login: React.FC = () => {
                 maxHeight: "90vh",
               }}
               title={
-                <div style={{ marginTop: "5rem" }}>
+                <div style={{marginTop: "5rem"}}>
                   <Flex
                     justify={"center"}
                     align={"center"}
@@ -139,7 +142,7 @@ const Login: React.FC = () => {
                     wrap={"wrap"}
                   >
                     <div>
-                      <img alt="logo" src="/logo.svg" width="100vw" />
+                      <img alt="logo" src="/logo.svg" width="100vw"/>
                     </div>
                     <div
                       style={{
@@ -161,14 +164,14 @@ const Login: React.FC = () => {
               }}
             >
               {status === "error" && loginType === "account" && (
-                <LoginMessage content={"错误的用户名和密码"} />
+                <LoginMessage content={"错误的用户名和密码"}/>
               )}
               <>
                 <ProFormText
                   name="username"
                   fieldProps={{
                     size: "large",
-                    prefix: <UserOutlined />,
+                    prefix: <UserOutlined/>,
                   }}
                   placeholder={"请输入用户名"}
                   rules={[
@@ -182,7 +185,7 @@ const Login: React.FC = () => {
                   name="password"
                   fieldProps={{
                     size: "large",
-                    prefix: <LockOutlined />,
+                    prefix: <LockOutlined/>,
                   }}
                   placeholder={"请输入密码"}
                   rules={[
@@ -196,13 +199,13 @@ const Login: React.FC = () => {
             </LoginForm>
           </Col>
           <Col
-            xs={{ flex: "100%" }}
-            sm={{ flex: "100%" }}
-            md={{ flex: "50%" }}
-            lg={{ flex: "50%" }}
-            xl={{ flex: "50%" }}
+            xs={{flex: "100%"}}
+            sm={{flex: "100%"}}
+            md={{flex: "50%"}}
+            lg={{flex: "50%"}}
+            xl={{flex: "50%"}}
           >
-            <Info />
+            <Info/>
           </Col>
         </Row>
       </div>

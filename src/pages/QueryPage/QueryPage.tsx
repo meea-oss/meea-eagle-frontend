@@ -75,6 +75,7 @@ const QueryPage: React.FC = () => {
           <Logo/>
         </Header>
         <div style={{
+          textAlign: "center",
           alignContent: "center",
           height: "90vh",
         }}>
@@ -92,7 +93,7 @@ const QueryPage: React.FC = () => {
 
               </div>
               <div style={{marginTop: "10px", justifyContent: "center",textAlign: "center"}}>
-                <div style={{maxWidth: "50%"}}>
+                <div>
                   <Flex wrap gap="small" justify={"center"}>
                     <Card title="邮箱" bordered={true} style={{width: 256}}>
                       support@meea.top
