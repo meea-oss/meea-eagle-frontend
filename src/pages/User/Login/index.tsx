@@ -115,6 +115,7 @@ const Login: React.FC = () => {
         <meta name="keywords" content="移动, 电子眼, 联盟, 移动电子眼联盟, 电子眼联盟, 移动电子眼"/>
         <meta name="description" content="移动电子眼联盟会员平台"/>
         <meta name="robots" content="index,follow"/>
+        <meta name="baidu-site-verification" content="codeva-anWMKZlMCy"/>
       </Helmet>
       <div
         style={{
