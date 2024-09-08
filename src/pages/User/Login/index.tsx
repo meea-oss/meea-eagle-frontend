@@ -103,13 +103,15 @@ const Login: React.FC = () => {
   const { status, type: loginType } = userLoginState;
   return (
     <div className={styles.container}>
-      <meta name="author" content="John Smith"/>
-      <meta name="keywords" content="React, JavaScript, semantic markup, html"/>
-      <meta name="description" content="API reference for the <meta> component in React DOM"/>
+
       <Helmet>
         <title>
           {"登录"}- {Settings.title}
         </title>
+        <meta name="author" content="meea.top"/>
+        <meta name="keywords" content="移动, 电子眼, 联盟, 移动电子眼联盟, 电子眼联盟, 移动电子眼"/>
+        <meta name="description" content="移动电子眼联盟会员平台"/>
+        <meta name="robots" content="index,follow"/>
       </Helmet>
       <div
         style={{
