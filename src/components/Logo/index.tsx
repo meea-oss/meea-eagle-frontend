@@ -22,7 +22,7 @@ const Logo: React.FC = () => {
             <div
               style={{
                 display: "flex",
-                fontFamily: "mbhh",
+                fontFamily: "ceym",
                 fontWeight: "normal",
                 height: "100%",
                 alignItems: "center",
