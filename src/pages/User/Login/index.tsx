@@ -152,7 +152,7 @@ const Login: React.FC = () => {
                     </div>
                     <div
                       style={{
-                        fontFamily: "mbhh",
+                        fontFamily: "ceym",
                         fontSize: "3rem",
                         fontWeight: "normal",
                       }}
